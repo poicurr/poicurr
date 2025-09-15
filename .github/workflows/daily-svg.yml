@@ -1,0 +1,32 @@
+name: Generate daily SVG
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # 毎日 09:15 JST（UTC 指定）
+  workflow_dispatch:      # 手動実行も許可
+
+permissions:
+  contents: write         # 生成物を push するために必要
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Generate SVG
+        run: python scripts/generate_daily_svg.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update daily SVG'
+          file_pattern: '*.svg'
