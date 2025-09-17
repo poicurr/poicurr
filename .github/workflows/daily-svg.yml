@@ -2,11 +2,11 @@ name: Generate daily SVG
 
 on:
   schedule:
-    - cron: '0 * * * *'   # 毎日 09:15 JST（UTC 指定）
-  workflow_dispatch:      # 手動実行も許可
+    - cron: '0 3,15 * * *' # 毎日3時/15時に実行
+  workflow_dispatch:       # 手動実行も許可
 
 permissions:
-  contents: write         # 生成物を push するために必要
+  contents: write          # 生成物を push するために必要
 
 jobs:
   run:
