@@ -21,17 +21,17 @@
   </defs>
   <rect width="800" height="200" fill="#0D1117"/>
   <g font-family="Consolas, monospace">
-    <text x="24" y="48" fill="#7f8c8d" font-size="16">2026-02-20 13:43 JST
+    <text x="24" y="48" fill="#7f8c8d" font-size="16">2026-02-21 00:34 JST
       <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
     </text>
   </g>
   <g filter="url(#glow2)">
     <text x="24" y="115" fill="none" stroke="url(#g2)" stroke-width="2"
           font-family="Segoe UI, system-ui, -apple-system, sans-serif"
-          font-size="28" filter="url(#flicker)">LGTMeow 🐱: Appearance is justice</text>
+          font-size="28" filter="url(#flicker)">Tip: Read the README before running ‘npm start’</text>
     <text x="24" y="115" fill="url(#g2)"
           font-family="Segoe UI, system-ui, -apple-system, sans-serif"
-          font-size="28" opacity="0.18">LGTMeow 🐱: Appearance is justice</text>
+          font-size="28" opacity="0.18">Tip: Read the README before running ‘npm start’</text>
     <rect x="24" y="90" width="752" height="34" fill="none" stroke="#00ffe5" opacity="0.25">
       <animate attributeName="opacity" values="0.25;0.6;0.25" dur="3s" repeatCount="indefinite"/>
     </rect>
